@@ -16,36 +16,33 @@
     #if($velocityCount > 0 )
       #if ($velocityCount % 4 == 1)
   <div class="m1">
-    <div class="mh ">
-      <div class="pm clearfix">
-        <img class="fl" src="${el.imgInfos[0].imgUrl}">
-      </div>
+    <div class="mh" style="background: url(${el.imgInfos[0].imgUrl}) no-repeat center;">
     </div>
       #elseif ($velocityCount % 4 == 2)
     <div class="mb pm">
-      <div class="mr1 clearfix" style="background-image: url(${el.imgInfos[0].imgUrl});">
-      </div>
+      <div class="mr1 clearfix" style="background: url(${el.imgInfos[0].imgUrl}) no-repeat;">
       #elseif ($velocityCount % 4 == 3)
-      <div class="product fr">
-        <div class="product-r1">
-          <a href="${el.productInfos[0].link}">
-            <img src="${el.productInfos[0].imgUrl}" alt="" >
-          </a>
-          <span></span>
+        <div class="product fr" data-itemId="${el.productInfos[0].itemId}">
+          <div class="product-r1">
+            <a href="${el.productInfos[0].link}">
+              <img src="${el.productInfos[0].imgUrl}" alt="" >
+            </a>
+            <span></span>
+          </div>
+          <h3><a href="${el.productInfos[0].link}">${el.productInfos[0].name}</a></h3>
+          <div class="product-r2">
+            <span class="product-r2c1">促销价：<b>￥</b><strong>${el.productInfos[0].listPrice}</strong></span>
+            <span class="product-r2c2">零售价：￥${el.productInfos[0].price}</span>
+          </div>
+          <div class="product-btn"><a href="${el.productInfos[0].link}">立即购买 &gt;</a></div>
         </div>
-        <h3><a href="${el.productInfos[0].link}">${el.productInfos[0].name}</a></h3>
-        <div class="product-r2">
-          <span class="product-r2c1">促销价：<b>￥</b><strong>${el.productInfos[0].listPrice}</strong></span>
-          <span class="product-r2c2">零售价：￥${el.productInfos[0].price}</span>
-        </div>
-        <div class="product-btn"><a href="${el.productInfos[0].link}">立即购买 &gt;</a></div>
       </div>
 
       #elseif ($velocityCount % 4 == 0)
       <div class="mr2">
         <ul class="clearfix">
           #foreach ($product in $el.productInfos)
-          <li class="product">
+          <li class="product" data-itemId="${product.itemId}">
             <div class="product-r1">
               <a href="${product.link}">
                 <img src="${product.imgUrl}" alt="" >
