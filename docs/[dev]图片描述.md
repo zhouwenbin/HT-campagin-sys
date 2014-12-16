@@ -7,3 +7,8 @@
 5. 楼层产品，[链接](https://raw.githubusercontent.com/leewind/HT-campagin-sys/master/static-img/img/product.jpg)
 
 **注**楼层n只要替换图片的数字就可以了
+
+## 修改style
+
+<link href="https://raw.githubusercontent.com/leewind/HT-campagin-sys/master/static-img/css/common.css" rel="stylesheet" type="text/css" />
+<link href="https://raw.githubusercontent.com/leewind/HT-campagin-sys/master/static-img/css/index.css" rel="stylesheet" type="text/css" />

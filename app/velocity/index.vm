@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width">
 <title>顺丰海淘</title>
-<link href="css/common.css" rel="stylesheet" type="text/css" />
-<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="https://raw.githubusercontent.com/leewind/HT-campagin-sys/master/static-img/css/common.css" rel="stylesheet" type="text/css" />
+<link href="https://raw.githubusercontent.com/leewind/HT-campagin-sys/master/static-img/css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   #foreach ($el in $content[0].imgInfos)
