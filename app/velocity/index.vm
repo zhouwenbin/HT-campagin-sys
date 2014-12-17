@@ -12,7 +12,7 @@
   #foreach ($el in $content[0].moduleCellInfo)
   <div class="banner" style="background: url(${el.property.imgUrl}) no-repeat center;"></div>
   #end
-
+ 
   #foreach ($el in $content)
     #if($velocityCount > 1 )
       #if ($velocityCount % 4 == 2)
@@ -57,7 +57,7 @@
             </div>
             <!--售罄状态-->
             <div class="product-btn"><a href="${cell.property.link}">敬请期待 ...</a></div>
-            <div class="mask"></div>
+            ##<div class="mask"></div>
             <div class="icon-sold"></div>
             <!--售罄状态-->
           </li>
