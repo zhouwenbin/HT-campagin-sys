@@ -32,8 +32,8 @@
           </div>
           <h3><a href="${el.moduleCellInfo[0].property.link}">${el.moduleCellInfo[0].property.name}</a></h3>
           <div class="product-r2">
-            <span class="product-r2c1">促销价：<b>￥</b><strong>${el.moduleCellInfo[0].listPrice}</strong></span>
-            <span class="product-r2c2">零售价：￥${el.moduleCellInfo[0].price}</span>
+            <span class="product-r2c1">促销价：<b>￥</b><strong></strong></span>
+            <span class="product-r2c2">零售价：￥</span>
           </div>
           <div class="product-btn"><a href="${el.moduleCellInfo[0].property.link}">立即购买 &gt;</a></div>
         </div>
@@ -52,8 +52,8 @@
             </div>
             <h3><a href="${cell.property.link}">${cell.property.name}</a></h3>
             <div class="product-r2">
-              <span class="product-r2c1">促销价：<b>￥</b><strong>$!product.listPrice}</strong></span>
-              <span class="product-r2c2">零售价：￥$!product.price}</span>
+              <span class="product-r2c1">促销价：<b>￥</b><strong></strong></span>
+              <span class="product-r2c2">零售价：￥</span>
             </div>
             <!--售罄状态-->
             <div class="product-btn"><a href="${cell.property.link}">敬请期待 ...</a></div>
