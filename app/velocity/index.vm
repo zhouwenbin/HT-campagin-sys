@@ -5,8 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width">
 <title>顺丰海淘</title>
-<link href="https://raw.githubusercontent.com/leewind/HT-campagin-sys/master/static-img/css/common.css" rel="stylesheet" type="text/css" />
-<link href="https://raw.githubusercontent.com/leewind/HT-campagin-sys/master/static-img/css/index.css" rel="stylesheet" type="text/css" />
+<link href="http://7mnpdt.com1.z0.glb.clouddn.com/common.css" rel="stylesheet">
+<link href="http://7mnpdt.com1.z0.glb.clouddn.com/index.css" rel="stylesheet">
 </head>
 <body>
   #foreach ($el in $content[0].moduleCellInfo)
