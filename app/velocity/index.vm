@@ -8,54 +8,54 @@
 <link href="https://raw.githubusercontent.com/leewind/HT-campagin-sys/master/static-img/css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  #foreach ($el in $content[0].imgInfos)
-  <div class="banner" style="background: url(${el.imgUrl}) no-repeat center;"></div>
+  #foreach ($el in $content[0].moduleCellInfo)
+  <div class="banner" style="background: url(${el.property.imgUrl}) no-repeat center;"></div>
   #end
 
   #foreach ($el in $content)
-    #if($velocityCount > 0 )
-      #if ($velocityCount % 4 == 1)
+    #if($velocityCount > 1 )
+      #if ($velocityCount % 4 == 2)
   <div class="m1">
-    <div class="mh" style="background: url(${el.imgInfos[0].imgUrl}) no-repeat center;">
+    <div class="mh" style="background: url(${el.moduleCellInfo[0].property.imgUrl}) no-repeat center;">
     </div>
-      #elseif ($velocityCount % 4 == 2)
-    <div class="mb pm">
-      <div class="mr1 clearfix" style="background: url(${el.imgInfos[0].imgUrl}) no-repeat;">
       #elseif ($velocityCount % 4 == 3)
-        <div class="product fr" data-itemId="${el.productInfos[0].itemId}">
+    <div class="mb pm">
+      <div class="mr1 clearfix" style="background: url(${el.moduleCellInfo[0].property.imgUrl}) no-repeat;">
+      #elseif ($velocityCount % 4 == 0)
+        <div class="product fr" data-itemId="${el.moduleCellInfo[0].property.itemId}">
           <div class="product-r1">
-            <a href="${el.productInfos[0].link}">
-              <img src="${el.productInfos[0].imgUrl}" alt="" >
+            <a href="${el.moduleCellInfo[0].property.link}">
+              <img src="${el.moduleCellInfo[0].property.imgUrl}" alt="" >
             </a>
             <span></span>
           </div>
-          <h3><a href="${el.productInfos[0].link}">${el.productInfos[0].name}</a></h3>
+          <h3><a href="${el.moduleCellInfo[0].property.link}">${el.moduleCellInfo[0].property.name}</a></h3>
           <div class="product-r2">
-            <span class="product-r2c1">促销价：<b>￥</b><strong>${el.productInfos[0].listPrice}</strong></span>
-            <span class="product-r2c2">零售价：￥${el.productInfos[0].price}</span>
+            <span class="product-r2c1">促销价：<b>￥</b><strong>${el.moduleCellInfo[0].listPrice}</strong></span>
+            <span class="product-r2c2">零售价：￥${el.moduleCellInfo[0].price}</span>
           </div>
-          <div class="product-btn"><a href="${el.productInfos[0].link}">立即购买 &gt;</a></div>
+          <div class="product-btn"><a href="${el.moduleCellInfo[0].property.link}">立即购买 &gt;</a></div>
         </div>
       </div>
 
-      #elseif ($velocityCount % 4 == 0)
+      #elseif ($velocityCount % 4 == 1)
       <div class="mr2">
         <ul class="clearfix">
-          #foreach ($product in $el.productInfos)
-          <li class="product" data-itemId="${product.itemId}">
+          #foreach ($cell in $el.moduleCellInfo)
+          <li class="product" data-itemId="${cell.property.itemId}">
             <div class="product-r1">
-              <a href="${product.link}">
-                <img src="${product.imgUrl}" alt="" >
+              <a href="${cell.property.link}">
+                <img src="${cell.property.imgUrl}" alt="" >
               </a>
               <span></span>
             </div>
-            <h3><a href="${product.link}">${product.name}</a></h3>
+            <h3><a href="${cell.property.link}">${cell.property.name}</a></h3>
             <div class="product-r2">
-              <span class="product-r2c1">促销价：<b>￥</b><strong>${product.listPrice}</strong></span>
-              <span class="product-r2c2">零售价：￥${product.price}</span>
+              <span class="product-r2c1">促销价：<b>￥</b><strong>$!product.listPrice}</strong></span>
+              <span class="product-r2c2">零售价：￥$!product.price}</span>
             </div>
             <!--售罄状态-->
-            <div class="product-btn"><a href="${product.link}">敬请期待 ...</a></div>
+            <div class="product-btn"><a href="${cell.property.link}">敬请期待 ...</a></div>
             <div class="mask"></div>
             <div class="icon-sold"></div>
             <!--售罄状态-->
