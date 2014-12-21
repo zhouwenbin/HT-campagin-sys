@@ -5,7 +5,7 @@
 }
 /*母婴潮流*/
 .m1 .mh{
-	/*background:#c5007d url(../img/m1-mh.jpg) no-repeat center;*/
+	background:#c5007d url(../img/m1-mh.jpg) no-repeat center;
 	color: #fff;
 	height: 140px;
 	margin-bottom: 20px;
@@ -37,7 +37,7 @@
 }
 
 .m1 .mr1{
-	/*background: #a20e84 url(../img/m1-mr1.jpg) no-repeat;*/
+	background: #a20e84 url(../img/m1-mr1.png) no-repeat 265px 132px;
 	margin-bottom: 14px;
 	padding: 33px 23px 45px;
 	position: relative;
@@ -46,7 +46,7 @@
 	width: 357px;
 }
 .m1 .buddle{
-	position: absolute;
+	position: absolute;	
 	color: #a20e84;
 	font-size: 18px;
 	line-height: 24px;
@@ -114,7 +114,7 @@
 .m1 .mr2 .product-r1{
 	margin-left:0;
 	margin-right: 0;
-	height: 211px;
+	height: 211px; 
 }
 .m1 .mr2 img{
 	max-width: 316px;
@@ -129,7 +129,7 @@
 	background:url(../img/m2-hc1.png) no-repeat 5px 55px;
 }
 .m2 .mr1{
-	background: #ad3f10 url(../img/m2-mr1.jpg) no-repeat;
+	background: #ad3f10 url(../img/m2-mr1.png) no-repeat 218px 192px;
 }
 .m2 .buddle{
 	color:#af6126;
@@ -139,7 +139,7 @@
 	top: 251px;
 }
 .m2 .buddle2{
-
+	
 	left: 148px;
 	top: 427px;
 }
@@ -158,7 +158,7 @@
 	background:url(../img/m3-hc1.png) no-repeat 17px 49px;
 }
 .m3 .mr1{
-	background: #23A0B6 url(../img/m3-mr1.jpg) no-repeat;
+	background: #23A0B6 url(../img/m2-mr1.png) no-repeat 218px 192px;
 }
 .m3 .buddle{
 	color:#23A0B6;
@@ -168,7 +168,7 @@
 	top: 251px;
 }
 .m3 .buddle2{
-
+	
 	left: 148px;
 	top: 427px;
 }

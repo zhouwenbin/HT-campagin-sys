@@ -1,78 +1,77 @@
+#define($_content)
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width">
 <title>顺丰海淘</title>
-<link href="css/common.css" rel="stylesheet" type="text/css" />
-<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="http://7mnpdt.com1.z0.glb.clouddn.com/common.css" rel="stylesheet">
+<link href="http://7mnpdt.com1.z0.glb.clouddn.com/index.css" rel="stylesheet">
 </head>
 <body>
-  #foreach ($el in $content[0].imgInfos)
-  <div class="banner" style="background: url(${el.imgUrl}) no-repeat center;"></div>
+  #foreach ($el in $content[0].moduleCellInfo)
+  <div class="banner" style="background: url(${el.property.imgUrl}) no-repeat center;"></div>
   #end
-
+ 
   #foreach ($el in $content)
-    #if($velocityCount > 0 )
-      #if ($velocityCount % 4 == 1)
+    #if($velocityCount > 1 )
+      #if ($velocityCount % 4 == 2)
   <div class="m1">
-    <div class="mh ">
-      <div class="pm clearfix">
-        <img class="fl" src="${el.imgInfos[0].imgUrl}">
-      </div>
+    <div class="mh" style="background: url(${el.moduleCellInfo[0].property.imgUrl}) no-repeat center;">
     </div>
-      #elseif ($velocityCount % 4 == 2)
-    <div class="mb pm">
-      <div class="mr1 clearfix" style="background-image: url(${el.imgInfos[0].imgUrl});">
-      </div>
       #elseif ($velocityCount % 4 == 3)
-      <div class="product fr">
-        <div class="product-r1">
-          <a href="${el.productInfos[0].link}">
-            <img src="${el.productInfos[0].imgUrl}" alt="" >
-          </a>
-          <span></span>
+    <div class="mb pm">
+      <div class="mr1 clearfix" style="background: url(${el.moduleCellInfo[0].property.imgUrl}) no-repeat;">
+      #elseif ($velocityCount % 4 == 0)
+        <div class="product fr" data-itemId="${el.moduleCellInfo[0].property.itemId}">
+          <div class="product-r1">
+            <a href="${el.moduleCellInfo[0].property.link}">
+              <img src="${el.moduleCellInfo[0].property.imgUrl}" alt="" >
+            </a>
+            <span></span>
+          </div>
+          <h3><a href="${el.moduleCellInfo[0].property.link}">${el.moduleCellInfo[0].property.name}</a></h3>
+          <div class="product-r2">
+            <span class="product-r2c1">促销价：<b>￥</b><strong></strong></span>
+            <span class="product-r2c2">零售价：￥</span>
+          </div>
+          <div class="product-btn"><a href="${el.moduleCellInfo[0].property.link}">立即购买 &gt;</a></div>
         </div>
-        <h3><a href="${el.productInfos[0].link}">${el.productInfos[0].name}</a></h3>
-        <div class="product-r2">
-          <span class="product-r2c1">促销价：<b>￥</b><strong>${el.productInfos[0].listPrice}</strong></span>
-          <span class="product-r2c2">零售价：￥${el.productInfos[0].price}</span>
-        </div>
-        <div class="product-btn"><a href="${el.productInfos[0].link}">立即购买 &gt;</a></div>
       </div>
 
-      #elseif ($velocityCount % 4 == 0)
+      #elseif ($velocityCount % 4 == 1)
       <div class="mr2">
         <ul class="clearfix">
-          #foreach ($product in $el.productInfos)
-          <li class="product">
+          #foreach ($cell in $el.moduleCellInfo)
+          <li class="product" data-itemId="${cell.property.itemId}">
             <div class="product-r1">
-              <a href="${product.link}">
-                <img src="${product.imgUrl}" alt="" >
+              <a href="${cell.property.link}">
+                <img src="${cell.property.imgUrl}" alt="" >
               </a>
               <span></span>
             </div>
-            <h3><a href="${product.link}">${product.name}</a></h3>
+            <h3><a href="${cell.property.link}">${cell.property.name}</a></h3>
             <div class="product-r2">
-              <span class="product-r2c1">促销价：<b>￥</b><strong>${product.listPrice}</strong></span>
-              <span class="product-r2c2">零售价：￥${product.price}</span>
+              <span class="product-r2c1">促销价：<b>￥</b><strong></strong></span>
+              <span class="product-r2c2">零售价：￥</span>
             </div>
             <!--售罄状态-->
-            <div class="product-btn"><a href="${product.link}">敬请期待 ...</a></div>
-            <div class="mask"></div>
+            <div class="product-btn"><a href="${cell.property.link}">敬请期待 ...</a></div>
+            ##<div class="mask"></div>
             <div class="icon-sold"></div>
             <!--售罄状态-->
           </li>
           #end
         </ul>
       </div>
-      #end
-    #end
     </div>
   </div>
+      #end
+    #end
   #end
   <a href="#" class="btn-top">回到顶部</a>
 </body>
 
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1253511102%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 </html>
+#end
