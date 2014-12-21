@@ -272,18 +272,14 @@ img{vertical-align: middle;}
 	border: none;
 }
 .btn-top{
-	padding: 8px 10px;
-	background: #b2b2b2;
-	background: rgba(0,0,0,0.3);
-	border-radius: 5px;
+	width: 148px;
+	height: 148px;
+	background: url(../img/btn-top.png);
 	position: fixed;
-	bottom: 100px;
-	right: 50px;
-	display: none;
-}
-.btn-top:hover{
-	background: #7f7f7f;
-	background: rgba(0,0,0,0.5);
+	left: 50%;
+	bottom:0;
+	text-indent: -999em;
+	margin-left: 500px;
 }
 .btn-more{
 	color: #999;
